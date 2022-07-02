@@ -9,6 +9,37 @@
 
     <script>
       document.write("hello,world");
+
+      class Animal {
+        constructor(name, age, rank) {
+          this.name = name;
+          this.age = age;
+          this.rank = rank;
+
+          const greet = () =>{
+            document.write(`こんにちは、${this.name}です`);
+            document.write(`${this.age}歳です。人間で${humanAge}歳です。`);
+            document.write("rank" + this.rank + "です。<br>");
+            
+          }
+
+          const getHumanAge = ()=> {
+            return this.age * 6;
+          }
+
+          const humanAge = getHumanAge(this.age);
+
+          greet();
+
+        }
+
+      }
+
+      const cat = new Animal("cat", 2, 5);
+      const dog = new Animal("dog", 5, 4);
+
+
+
     </script>
   
   </body>
